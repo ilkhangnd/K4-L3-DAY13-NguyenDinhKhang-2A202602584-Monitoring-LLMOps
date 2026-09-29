@@ -27,9 +27,7 @@
 | Trace waterfall | ![Trace waterfall](evidence/07-trace-waterfall.png) |
 | Trace metadata | ![Trace metadata](evidence/08-trace-metadata.png) |
 | Prompt versions | ![Prompt versions](evidence/09-prompt-versions.png) |
-| Prompt rollback | ![Prompt rollback — production v2](evidence/10a-production-v2.png), 
-![Prompt rollback — trace v2 production](evidence/10b-trace-v2-production.png),  
-![Prompt rollback — production v1](evidence/10c-production-rollback-v1.png), ![Prompt rollback — trace v1 after rollback](evidence/10d-trace-v1-after-rollback.png) |
+| Prompt rollback | ![Prompt rollback — production v2](evidence/10a-production-v2.png)<br><br>![Prompt rollback — trace v2 production](evidence/10b-trace-v2-production.png)<br><br>![Prompt rollback — production v1](evidence/10c-production-rollback-v1.png)<br><br>![Prompt rollback — trace v1 after rollback](evidence/10d-trace-v1-after-rollback.png) |
 | Dashboard runtime | ![Dashboard runtime](evidence/11-dashboard-overview.png) |
 | Incident metric | ![Incident metric](evidence/12-incident-metric.png) |
 | Incident log | ![Incident log](evidence/13-incident-log.png) |
