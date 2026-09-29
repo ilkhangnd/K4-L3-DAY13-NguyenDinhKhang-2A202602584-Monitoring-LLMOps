@@ -7,7 +7,12 @@ primary_slo:
     total_event: 'event == "request_received"'
   target_percent: 99.5
   error_budget_percent: 0.5
-  note: Học viên phải giải thích hoặc điều chỉnh ngưỡng bằng baseline của mình.
+  note: >-
+    Baseline CP2 có latency trung bình khoảng 556 ms và P95 dưới 3,000 ms,
+    nên giữ ngưỡng 3 giây để bắt tail latency ảnh hưởng người dùng thay vì
+    tối ưu theo average. Error budget là 0.5% số request trong 28 ngày:
+    với N request được đo, tối đa 0.005 × N request có thể chậm hơn 3 giây
+    hoặc thất bại; tương đương 201.6 phút trên cửa sổ 28 ngày.
 guardrails:
   error_rate_pct_max: 2
   daily_cost_usd_max: 2.5

@@ -44,10 +44,10 @@ pip install -r requirements.txt
 Copy-Item .env.example .env
 ```
 
-macOS/Linux:
+macOS/Linux (dùng Python 3.11–3.13; không dùng Python 3.14 với bộ dependency hiện tại):
 
 ```bash
-python -m venv .venv
+python3.13 -m venv .venv
 source .venv/bin/activate
 python -m pip install --upgrade pip
 pip install -r requirements.txt
@@ -118,6 +118,8 @@ Starter dùng Langfuse Python SDK v4 và mới tạo root observation cho `LabAg
 Không capture raw prompt/output chứa PII. Correlation ID phải xuất hiện trong trace metadata để nối trace với log.
 
 Dashboard dùng `data/logs.jsonl` làm nguồn chuẩn và giữ đúng 6 panel trong `config/dashboard.yaml`. Panel latency phải có P50/P95/P99 và TTFT; panel errors phải thể hiện cả retrieval success. Sau đó hoàn thiện:
+
+Sau khi API chạy, mở dashboard runtime tại `http://127.0.0.1:8000/dashboard`. Dashboard tự refresh mỗi 30 giây, hiển thị time range 60 phút, đơn vị và threshold/SLO line cho sáu panel.
 
 - `config/slo.yaml`: giải thích hoặc điều chỉnh SLO, tính error budget;
 - `config/alert_rules.yaml`: ba alert symptom-based, có duration, severity, owner, Slack channel và runbook;
